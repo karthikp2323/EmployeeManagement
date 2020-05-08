@@ -1,4 +1,3 @@
 # EmployeeManagement
-Creating this project using .Net Core
 
-
+Creating Employee portal using .net core
