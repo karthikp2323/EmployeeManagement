@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using DAL.Repositories;
+using DAL.Repositories.IRepository;
+using DAL.Repositories.Repository;
 
 namespace EmployeeManagement
 {
@@ -24,6 +27,7 @@ namespace EmployeeManagement
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IUser, User>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

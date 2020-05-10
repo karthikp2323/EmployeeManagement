@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement", "EmployeeManagement\EmployeeManagement.csproj", "{9159E6E3-D409-473D-B2FB-B09B9D4C8383}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{B9335D51-C4E6-44B4-A4A3-CCD587E9C647}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{9159E6E3-D409-473D-B2FB-B09B9D4C8383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9159E6E3-D409-473D-B2FB-B09B9D4C8383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9159E6E3-D409-473D-B2FB-B09B9D4C8383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9335D51-C4E6-44B4-A4A3-CCD587E9C647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9335D51-C4E6-44B4-A4A3-CCD587E9C647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9335D51-C4E6-44B4-A4A3-CCD587E9C647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9335D51-C4E6-44B4-A4A3-CCD587E9C647}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
