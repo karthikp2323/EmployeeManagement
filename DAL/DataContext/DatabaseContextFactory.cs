@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.DataContext
 {
-    public class DatabaseContextFactory : IDesignTimeDbContextFactory<DatabaseContext>
+    public class DatabaseContextFactory : IDesignTimeDbContextFactory<EmployeeDBContext>
     {
-        public DatabaseContext CreateDbContext(string[] args)
+        public EmployeeDBContext CreateDbContext(string[] args)
         {
             AppConfiguration appConfig = new AppConfiguration();
-            var opsBuilder = new DbContextOptionsBuilder<DatabaseContext>();
+            var opsBuilder = new DbContextOptionsBuilder<EmployeeDBContext>();
             opsBuilder.UseMySQL(appConfig.ConnectionString);
-            return new DatabaseContext(opsBuilder.Options);
+            return new EmployeeDBContext(opsBuilder.Options);
         }
     }
 }

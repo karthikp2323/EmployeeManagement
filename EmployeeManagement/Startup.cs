@@ -11,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 using DAL.Repositories;
 using DAL.Repositories.IRepository;
 using DAL.Repositories.Repository;
+using DAL.DataContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagement
 {
@@ -26,8 +28,11 @@ namespace EmployeeManagement
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<EmployeeDBContext>(options => options.UseMySQL(Configuration.GetConnectionString("EmployeeDB")));
             services.AddControllersWithViews();
-            services.AddScoped<IUser, User>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            //services.AddScoped<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
